@@ -5,7 +5,7 @@
   >
     <v-row class="d-flex justify-center align-center">
       <v-col cols="12" class="d-flex justify-center align-center">
-        <span class="text">
+        <span class="text text-center">
           "Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s."
@@ -36,25 +36,28 @@
 
 <style scoped>
 .container-proprieties {
-  margin: 100px 0 0;
+  margin: 100px 0;
 }
 .text {
   font-size: 35px;
   font-weight: 400;
   line-height: 1.2em;
-  max-width: 50%;
+  max-width: 80%;
+  font-family: "Work Sans", sans-serif;
 }
 
 .name {
   font-size: 15px;
   font-weight: 700;
   line-height: 1.5em;
+  font-family: "Work Sans", sans-serif;
 }
 
 .description {
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5em;
+  font-family: "Work Sans", sans-serif;
 }
 
 .avatar {

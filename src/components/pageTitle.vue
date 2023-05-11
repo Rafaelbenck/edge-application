@@ -25,13 +25,13 @@
 }
 .title {
   font-size: 35px;
-  font-weight: 400;
-  line-height: 0.2em;
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
 }
 
 .subtitle {
   font-size: 20px;
-  font-weight: 300;
-  line-height: 1.2em;
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
 }
 </style>

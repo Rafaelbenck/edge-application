@@ -1,16 +1,20 @@
 <template>
   <div>
-    <componentHeader />
     <pageTitle />
     <Card />
-    <componentParagraph />
+    <textParagraph />
+    <cardPlaylist />
+    <jorgeCedilha />
+    <textParagraph />
   </div>
 </template>
 
 <script setup>
-import pageTitle from "./pageTitle.vue";
 import Card from "./Card.vue";
-import componentParagraph from "./componentParagraph.vue";
+import pageTitle from "./pageTitle.vue";
+import cardPlaylist from "./cardPlaylist.vue";
+import textParagraph from "./textParagraph.vue";
+import jorgeCedilha from "./jorgeCedilha.vue";
 
 import { ref, onMounted } from "vue";
 import axios from "axios";

@@ -1,8 +1,14 @@
 <template>
   <v-app-bar app>
-    <v-toolbar-title class="header-title mr-12">Home</v-toolbar-title>
+    <v-toolbar-title class="header-title mr-12">Rafael</v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-btn class="contact-me" @click="onButtonClick">Contact me</v-btn>
+    <v-btn
+      variant="outlined"
+      rounded="xl"
+      class="contact-me"
+      @click="onButtonClick"
+      >Contact me</v-btn
+    >
   </v-app-bar>
 </template>
 
@@ -23,6 +29,7 @@ const onButtonClick = () => {
   font-weight: 500;
   font-family: "Work Sans", sans-serif;
   color: #000;
+  margin: 0 50px;
 }
 
 .contat-me {
@@ -34,6 +41,7 @@ const onButtonClick = () => {
   margin: 36px 0;
   width: 150px;
   height: 50px;
+  border-radius: 33px;
 }
 
 .contact-me:hover {

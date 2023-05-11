@@ -6,7 +6,7 @@
           <v-col
             cols="6"
             class="d-flex justify-center align-center"
-            padding="0px;"
+            :padding="0"
           >
             <v-row>
               <h1>{{ nome }} {{ sobrenome }}</h1>
@@ -18,13 +18,9 @@
             </v-row>
           </v-col>
           <v-col cols="6" class="rounded-right">
-            <v-img
-              :width="500"
-              src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-            ></v-img>
+            <Img />
           </v-col>
         </v-row>
-        <v-row> </v-row>
       </v-col>
     </v-container>
     <v-container align="center">
@@ -38,6 +34,8 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import axios from "axios";
+
+import Img from "./Img.vue";
 
 const nome = ref("");
 const sobrenome = ref("");
@@ -88,6 +86,7 @@ h1 {
   margin: 36px 0;
   width: 150px;
   height: 50px;
+  border-radius: 33px;
 }
 .btn-saber-mais:hover {
   color: #f6ff00;
