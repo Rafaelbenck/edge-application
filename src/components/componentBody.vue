@@ -1,15 +1,16 @@
 <template>
-  <v-app>
-    <v-main>
-      <componentHeader />
-      <componentBody />
-    </v-main>
-  </v-app>
+  <div>
+    <componentHeader />
+    <pageTitle />
+    <Card />
+    <componentParagraph />
+  </div>
 </template>
 
 <script setup>
-import componentBody from "./components/componentBody.vue";
-import componentHeader from "./components/componentHeader.vue";
+import pageTitle from "./pageTitle.vue";
+import Card from "./Card.vue";
+import componentParagraph from "./componentParagraph.vue";
 
 import { ref, onMounted } from "vue";
 import axios from "axios";

@@ -1,20 +1,38 @@
 <template>
-  <v-container height="520" class="d-flex container-proprieties">
-    <v-col cols="6" class="d-flex justify-center align-center" padding="0px;">
-      <v-row>
-        <span class="text-hello">{{ nome }} {{ sobrenome }}</span>
-      </v-row>
-      <v-row>
-        <v-btn @click="nextSlide" class="btn-saber-mais">Saber Mais</v-btn>
-      </v-row>
-    </v-col>
-    <v-col cols="6" class="rounded-right">
-      <v-img
-        :width="500"
-        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-      ></v-img>
-    </v-col>
-  </v-container>
+  <div>
+    <v-container height="520" class="d-flex container-proprieties">
+      <v-col cols="12" class="d-flex justify-center align-center">
+        <v-row>
+          <v-col
+            cols="6"
+            class="d-flex justify-center align-center"
+            padding="0px;"
+          >
+            <v-row>
+              <h1>{{ nome }} {{ sobrenome }}</h1>
+              <span class="text-hello"
+                >Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s,
+              </span>
+            </v-row>
+          </v-col>
+          <v-col cols="6" class="rounded-right">
+            <v-img
+              :width="500"
+              src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            ></v-img>
+          </v-col>
+        </v-row>
+        <v-row> </v-row>
+      </v-col>
+    </v-container>
+    <v-container align="center">
+      <div>
+        <v-btn class="btn-saber-mais">Get Started</v-btn>
+      </div>
+    </v-container>
+  </div>
 </template>
 
 <script setup>
@@ -37,33 +55,42 @@ const fetchData = async () => {
 };
 
 onMounted(fetchData);
-
-const currentSlide = ref(0);
-
-const items = [
-  { image: "https://via.placeholder.com/400x400?text=Image+1", alt: "Image 1" },
-  { image: "https://via.placeholder.com/400x400?text=Image+2", alt: "Image 2" },
-  { image: "https://via.placeholder.com/400x400?text=Image+3", alt: "Image 3" },
-];
-
-function nextSlide() {
-  currentSlide.value = (currentSlide.value + 1) % items.length;
-}
 </script>
 
 <style scoped>
 .container-proprieties {
-  background-color: #008080;
+  background-color: #0b03f7d8;
   border: #fff;
   border-radius: 23px;
+  padding: 4rem 2.5rem;
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+  font-family: "Work Sans", sans-serif;
+  color: #f6ff00;
 }
 .text-hello {
   font-size: 32px;
-  font-weight: bold;
-}
-.btn-saber-mais {
-  background-color: #262627;
+  font-weight: 300;
+  font-family: "Work Sans", sans-serif;
   color: #fff;
-  margin-top: 16px;
+}
+
+.btn-saber-mais {
+  color: #262627;
+  font-size: 13px;
+  background-color: #f6ff00;
+  font-weight: 700;
+  font-family: "Work Sans", sans-serif;
+  margin: 36px 0;
+  width: 150px;
+  height: 50px;
+}
+.btn-saber-mais:hover {
+  color: #f6ff00;
+  background-color: #0b03f7d8;
 }
 </style>

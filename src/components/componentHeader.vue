@@ -1,54 +1,43 @@
 <template>
-  <div>
-    <template>
-      <v-app-bar app color="red" elevate-on-scroll>
-        <v-toolbar-title class="ml-4"> João </v-toolbar-title>
-
-        <v-spacer></v-spacer>
-
-        <v-btn text @click="scrollToAboutMe"> About Me </v-btn>
-      </v-app-bar>
-    </template>
-  </div>
+  <v-app-bar app>
+    <v-toolbar-title class="header-title mr-12">Home</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <v-btn class="contact-me" @click="onButtonClick">Contact me</v-btn>
+  </v-app-bar>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import axios from "axios";
+import { ref } from "vue";
 
-const nome = ref("");
-const sobrenome = ref("");
-const idade = ref("");
-const profissao = ref("");
-const caracteristicas = ref({});
-const skills = ref({});
-const report = ref("");
+const title = ref("My App");
+const buttonLabel = ref("Button");
 
-const scrollToAboutMe = () => {
-  const aboutMe = document.getElementById("about-me");
-  aboutMe.scrollIntoView({ behavior: "smooth" });
+const onButtonClick = () => {
+  // Implement your button click handler here
 };
-
-const fetchData = async () => {
-  try {
-    const response = await axios.get("http://oj7bby70j8.map.azionedge.net/");
-    const data = response.data;
-
-    nome.value = data.nome;
-    sobrenome.value = data.sobrenome;
-    idade.value = data.idade;
-    profissao.value = data.profissao;
-    caracteristicas.value = data.caracteristicas;
-    skills.value = data.skills;
-    report.value = data.report;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-onMounted(fetchData);
-
-const nomeCompleto = `${nome.value} ${sobrenome.value}`;
 </script>
 
-<style scoped></style>
+<style scoped>
+.header-title {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: "Work Sans", sans-serif;
+  color: #000;
+}
+
+.contat-me {
+  color: #f6ff00;
+  font-size: 25px;
+  background-color: #262627;
+  font-weight: 700;
+  font-family: "Work Sans", sans-serif;
+  margin: 36px 0;
+  width: 150px;
+  height: 50px;
+}
+
+.contact-me:hover {
+  color: #fff;
+  background-color: #0b03f7d8;
+}
+</style>
